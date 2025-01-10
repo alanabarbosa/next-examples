@@ -49,6 +49,10 @@ li {
   margin-bottom: 0.5rem;
 }
 
+a {
+  cursor: pointer;
+}
+
 label {
   display: block;
   margin-bottom: 0.25rem;
