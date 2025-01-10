@@ -21,6 +21,7 @@ export default async function ProductsPage({params}: PageParams) {
 
     return <>
         <h1>Products Page</h1>
+        <Link href="/products">return to products page</Link>
         {data && data.id ? (
             <div className="product-card">
                 <p>Name: {data.nome}</p>
@@ -32,6 +33,5 @@ export default async function ProductsPage({params}: PageParams) {
         ) : (
             <p>Product not found for this id</p>
         )}
-        <Link href="/products">return to products page</Link>
     </>
 }

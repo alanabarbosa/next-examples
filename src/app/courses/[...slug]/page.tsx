@@ -32,13 +32,14 @@ export default async function CoursesPage({params}: PageParams) {
 
     return <>
         <h1>Courses Page</h1>
+        <Link href="/products">return to courses page</Link>
         {data && data.id ? (
             <div className="product-card">
                 <h2>{data.nome}</h2>
                 <p>Description: {data.descricao}</p>
-                <p>Total Class: {data.total_aulas}</p>
+                <p>Total Classes: {data.total_aulas}</p>
                 <p>Total Hour: {data.total_horas}</p>
-                <h3>Class:</h3>
+                <h3>Classes:</h3>
                 <ul>
                     {data.aulas.map((aula) => (
                         <li key={aula.id}>
@@ -51,8 +52,6 @@ export default async function CoursesPage({params}: PageParams) {
             </div>
         ) : (
             <p>Course not found for this slug</p>
-        )}  
-
-        <Link href="/products">return to courses page</Link>       
+        )}
     </>
 }
