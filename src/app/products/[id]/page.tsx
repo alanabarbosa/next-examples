@@ -8,9 +8,9 @@ type PageParams = {
 
 type Product = {
     id: number;
-    nome: String;
+    nome: string;
     preco: number;
-    descricao: String;
+    descricao: string;
     estoque: number;
     importado: number;
 }

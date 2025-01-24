@@ -2,9 +2,9 @@ import Link from "next/link";
 
 type Course = {
     id: number;
-    slug: String;
-    nome: String;
-    descricao: String;
+    slug: string;
+    nome: string;
+    descricao: string;
     total_aulas: number;
     total_horas: number;
 }

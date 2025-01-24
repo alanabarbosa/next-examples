@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 
-export default function calcIMC() {
+export default function CalcIMC() {
     const [ weight, setWeight ] = React.useState('');
     const [ height, setHeight ] = React.useState('');
     const [ imc, setImc ] = React.useState('');
@@ -13,7 +13,7 @@ export default function calcIMC() {
     }
 
     return <>
-       <label htmlFor="weight">What's your weight? (kg)</label>
+       <label htmlFor="weight">What&apos;s your weight? (kg)</label>
        <input 
         type="text" 
         placeholder="your weight here..." 
@@ -21,7 +21,7 @@ export default function calcIMC() {
         value={weight}
         onChange={(e) => setWeight(e.target.value)}
         />
-       <label htmlFor="height">What's your height? (cm)</label>
+       <label htmlFor="height">What&apos;s your height? (cm)</label>
        <input 
         type="text" 
         placeholder="your height here..." 

@@ -1,16 +1,21 @@
 import Link from "next/link";
 
-type Product = {
-    id: number;
-    nome: String;
+export type Product = {
+    id?: string;
+    nome: string;
     preco: number;
-    descricao: String;
+    descricao: string;
     estoque: number;
-    importado: number;
-}
+    importado: 0 | 1;
+  };
+  
 
 export default async function ServerFetch() {
-    const response = await fetch("https://api.origamid.online/produtos");
+    const response = await fetch("https://api.origamid.online/produtos", {
+        next: {
+            revalidate: 5,
+        },
+    });
     const data = await response.json() as Product[];
     return <>
         <div className="flex product-container">

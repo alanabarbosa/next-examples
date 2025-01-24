@@ -1,8 +1,11 @@
 import ServerFetch from "@/components/server-fetch";
 
-export default function Products() {
-    return <>
-        <h1>Products Server</h1>
+  export default async function Products() {  
+  
+    return (
+      <main>
+        <h1>Products</h1>
         <ServerFetch />
-    </>
-}
+      </main>
+    );
+  }
